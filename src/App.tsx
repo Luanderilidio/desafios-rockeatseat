@@ -66,7 +66,13 @@ function App() {
       <div className="grid grid-cols-2 grid-rows-2 gap-4">
         <div className="row-span-2 col-span-2 sm:col-span-1 ">
           <div className="bg-[#2A2141] p-10 flex flex-col gap-8 rounded-lg">
-            <img src={Image} alt="image" className="" />
+            <img
+              src={
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAePJR4Cb1DUkn62466Os7tt_37bPeKb_PXA&usqp=CAU"
+              }
+              alt="image"
+              className="rounded-lg"
+            />
             <div>
               <p className="text-3xl font-bold ">Vocês são Phoda</p>
               <p className="text-lg  text-gray-400">Vitroles</p>
@@ -85,7 +91,13 @@ function App() {
         </div>
         <div className="col-span-2 sm:col-span-1 bg-[#2A2141] p-10 flex flex-col gap-6 rounded-lg">
           <div className="flex gap-4">
-            <img src={Image} alt="image" className="w-20" />
+            <img
+              src={
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAePJR4Cb1DUkn62466Os7tt_37bPeKb_PXA&usqp=CAU"
+              }
+              alt="image"
+              className="w-20"
+            />
             <div>
               <p className="text-2xl font-bold ">Vocês são Phoda</p>
               <p className="text-lg  text-gray-400">Vitroles</p>
