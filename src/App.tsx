@@ -108,7 +108,7 @@ function App() {
         </div>
         <div className="col-span-2 sm:col-span-1 bg-[#2A2141] p-10 flex flex-col gap-6 rounded-lg justify-center animate__animated animate__animated animate__backInUp animate__delay-2s">
           <div className="flex gap-4">
-            {/* <img src={Image} alt="image" className="w-20" /> */}
+            <img src={Image} alt="image" className="w-20" />
             <div>
               <p className="text-2xl font-bold ">Acorda Devinho</p>
               <p className="text-lg  text-gray-400">Banda Rockeatseat</p>
