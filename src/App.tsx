@@ -1,11 +1,12 @@
 import Image from "../src/assets/image.svg";
+import Image2 from "../src/assets/image2.jpg";
 import { FastForward, Play, Rewind } from "phosphor-react";
 import ProgressBar from "@ramonak/react-progress-bar";
 import AudioPlayer from "./Components/AudioPlayer";
-// import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import Music1 from "../src/assets/musica1.mp3";
 import { IconButton } from "@mui/material";
+import "animate.css";
 
 import React, { useState, useEffect, useRef } from "react";
 import { number } from "prop-types";
@@ -22,18 +23,12 @@ function App() {
   const isReady = useRef();
 
   const { duration } = audioRef.current;
-  // console.log(audioRef.current.currentTime);
   const toPrevTrack = () => {
-    if (trackIndex - 1 < 0) {
-      setTrackIndex(tracks.length - 1);
-    } else {
-      setTrackIndex(trackIndex - 1);
-    }
+    audioRef.current.currentTime = audioRef.current.currentTime - 10;
   };
 
   const toNextTrack = () => {
     audioRef.current.currentTime = audioRef.current.currentTime + 10;
-    console.log(audioRef.current.currentTime);
   };
 
   useEffect(() => {
@@ -48,7 +43,6 @@ function App() {
   }, [isPlaying]);
 
   const startTimer = () => {
-    // Clear any timers already running
     const timer = setInterval(() => {
       if (audioRef.current.ended) {
         toNextTrack();
@@ -65,17 +59,11 @@ function App() {
     <div className="sm:fixed w-full h-full flex items-center justify-center p-5 sm:p-0 text-gray-300 bg-[#0F0D13]">
       <div className="grid grid-cols-2 grid-rows-2 gap-4">
         <div className="row-span-2 col-span-2 sm:col-span-1 ">
-          <div className="bg-[#2A2141] p-10 flex flex-col gap-8 rounded-lg">
-            <img
-              src={
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAePJR4Cb1DUkn62466Os7tt_37bPeKb_PXA&usqp=CAU"
-              }
-              alt="image"
-              className="rounded-lg"
-            />
+          <div className="bg-[#2A2141] p-10 flex flex-col gap-8 rounded-lg animate__animated animate__backInLeft">
+            <img src={Image} alt="image" className="rounded-lg" />
             <div>
-              <p className="text-3xl font-bold ">Vocês são Phoda</p>
-              <p className="text-lg  text-gray-400">Vitroles</p>
+              <p className="text-3xl font-bold ">Acorda Devinho</p>
+              <p className="text-lg  text-gray-400">Banda RockeatSeat</p>
             </div>
             <div className="flex items-center justify-between ">
               <AudioPlayer
@@ -89,18 +77,12 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="col-span-2 sm:col-span-1 bg-[#2A2141] p-10 flex flex-col gap-6 rounded-lg">
+        <div className="col-span-2 sm:col-span-1 bg-[#2A2141] p-10 flex flex-col gap-6 rounded-lg animate__animated animate__backInDown animate__delay-1s">
           <div className="flex gap-4">
-            <img
-              src={
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAePJR4Cb1DUkn62466Os7tt_37bPeKb_PXA&usqp=CAU"
-              }
-              alt="image"
-              className="w-20"
-            />
+            <img src={Image2} alt="image" className="w-16 rounded-lg" />
             <div>
-              <p className="text-2xl font-bold ">Vocês são Phoda</p>
-              <p className="text-lg  text-gray-400">Vitroles</p>
+              <p className="text-2xl font-bold ">Best of Me 🤘</p>
+              <p className="text-lg  text-gray-400">Neffex</p>
             </div>
           </div>
 
@@ -111,7 +93,7 @@ function App() {
           </div>
           <div className="flex flex-col gap-2">
             <ProgressBar
-              completed={50}
+              completed={69}
               height="8px"
               bgColor="#FFFFFF"
               baseBgColor="#939393"
@@ -119,12 +101,12 @@ function App() {
               isLabelVisible={false}
             />
             <div className="flex items-center justify-between text-gray-400">
-              <p>00:00</p>
-              <p>03:00</p>
+              <p>02:50</p>
+              <p>03:44</p>
             </div>
           </div>
         </div>
-        <div className="col-span-2 sm:col-span-1 bg-[#2A2141] p-10 flex flex-col gap-6 rounded-lg justify-center">
+        <div className="col-span-2 sm:col-span-1 bg-[#2A2141] p-10 flex flex-col gap-6 rounded-lg justify-center animate__animated animate__animated animate__backInUp animate__delay-2s">
           <div className="flex gap-4">
             {/* <img src={Image} alt="image" className="w-20" /> */}
             <div>
@@ -137,7 +119,7 @@ function App() {
             <Play size={32} weight="fill" />
             <FastForward weight="fill" size={32} />
           </div>
-          <div className="flex flex-col gap-2">
+          {/* <div className="flex flex-col gap-2">
             <ProgressBar
               completed={50}
               height="8px"
@@ -150,7 +132,7 @@ function App() {
               <p>00:00</p>
               <p>03:00</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
