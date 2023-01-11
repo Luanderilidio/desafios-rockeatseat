@@ -1,11 +1,9 @@
-import Image from "../src/assets/image.svg";
 import Image2 from "../src/assets/image2.jpg";
 import { FastForward, Play, Rewind } from "phosphor-react";
 import ProgressBar from "@ramonak/react-progress-bar";
 import AudioPlayer from "./Components/AudioPlayer";
-import "react-h5-audio-player/lib/styles.css";
 import Music1 from "../src/assets/musica1.mp3";
-import { IconButton } from "@mui/material";
+import "react-h5-audio-player/lib/styles.css";
 import "animate.css";
 
 import React, { useState, useEffect, useRef } from "react";
@@ -59,11 +57,15 @@ function App() {
     <div className="sm:fixed w-full h-full flex items-center justify-center p-5 sm:p-0 text-gray-300 bg-[#0F0D13]">
       <div className="grid grid-cols-2 grid-rows-2 gap-4">
         <div className="row-span-2 col-span-2 sm:col-span-1 ">
-          <div className="bg-[#2A2141] p-10 flex flex-col gap-8 rounded-lg animate__animated animate__backInLeft">
-            <img src={Image} alt="image" className="rounded-lg" />
+          <div className="bg-[#2A2141] p-10 flex flex-col gap-8 rounded-lg animate__animated animate__backInLeft animate__delay-0.5s animate__fast">
+            <img
+              src={Image2}
+              alt="image"
+              className="rounded-lg w-[300px] h-[300px] "
+            />
             <div>
-              <p className="text-3xl font-bold ">Acorda Devinho</p>
-              <p className="text-lg  text-gray-400">Banda RockeatSeat</p>
+              <p className="text-3xl font-bold ">Best of Me 🤘</p>
+              <p className="text-lg  text-gray-400">Neffex</p>
             </div>
             <div className="flex items-center justify-between ">
               <AudioPlayer
@@ -77,9 +79,9 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="col-span-2 sm:col-span-1 bg-[#2A2141] p-10 flex flex-col gap-6 rounded-lg animate__animated animate__backInDown animate__delay-1s">
+        <div className="col-span-2 sm:col-span-1 bg-[#2A2141] p-10 flex flex-col gap-6 rounded-lg animate__animated animate__backInDown animate__delay-1s animate__fast">
           <div className="flex gap-4">
-            <img src={Image2} alt="image" className="w-16 rounded-lg" />
+            <img src={Image2} alt="image" className="w-16  rounded-lg" />
             <div>
               <p className="text-2xl font-bold ">Best of Me 🤘</p>
               <p className="text-lg  text-gray-400">Neffex</p>
@@ -106,12 +108,12 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="col-span-2 sm:col-span-1 bg-[#2A2141] p-10 flex flex-col gap-6 rounded-lg justify-center animate__animated animate__animated animate__backInUp animate__delay-2s">
+        <div className="col-span-2 sm:col-span-1 bg-[#2A2141] p-10 flex flex-col gap-6 rounded-lg justify-center animate__animated animate__animated animate__backInUp animate__delay-2s animate__fast">
           <div className="flex gap-4">
-            <img src={Image} alt="image" className="w-20" />
+            <img src={Image2} alt="image" className="w-16  rounded-lg" />
             <div>
-              <p className="text-2xl font-bold ">Acorda Devinho</p>
-              <p className="text-lg  text-gray-400">Banda Rockeatseat</p>
+              <p className="text-3xl font-bold ">Best of Me 🤘</p>
+              <p className="text-lg  text-gray-400">Neffex</p>
             </div>
           </div>
           <div className="flex items-center justify-between ">
